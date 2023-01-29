@@ -7,7 +7,7 @@ import { PlaceFetchService } from '../services/place-fetch.service';
   styleUrls: ['./place-list.component.scss'],
 })
 export class PlaceListComponent implements OnInit {
-  public places: any = [];
+  public places: any;
 
   constructor(private plyFetch: PlaceFetchService) {}
 
@@ -17,7 +17,7 @@ export class PlaceListComponent implements OnInit {
   getPlacesList() {
     this.plyFetch.getPlaces().subscribe((data) => {
       console.log(data);
-      this.places = data.msg;
+      this.places = data.attractions;
       console.log('Place List:' + this.places);
     });
   }
