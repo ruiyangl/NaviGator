@@ -20,3 +20,8 @@ After obtaining the API key, modify your own key in the `/NaviGator/BackEnd/hand
 
 
 ### Frontend
+Install 'node' and 'npm'
+Install angular CLI - npm install -g @angular/cli
+npm install
+npm audit fix
+ng serve (When the app is running, copy the localhost link where the app runs and paste it in a browser. "ng serve -o" to open in a browser automatically)
