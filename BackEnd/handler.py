@@ -48,19 +48,19 @@ def get_attraction_list(point_of_interest, pg):
         try:
             res[dest]["rate"] = data["rate"]
         except:
-            pass
+            res[dest]["rate"] = "N/A"
         try:
             res[dest]["addr"] = f"{data['address']['road']}, {data['address']['city']}, {data['address']['country']}"
         except:
-            pass
+            res[dest]["addr"] = "N/A"
         try:
             res[dest]["img"] = data["image"]
         except:
-            pass
+            res[dest]["img"] = "https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg?20200913095930"
         try:
             res[dest]["discription"] = data["wikipedia_extracts"]["text"]
         except:
-            pass
+            res[dest]["discription"] = "N/A"
         count += 1
         i += 1
     
