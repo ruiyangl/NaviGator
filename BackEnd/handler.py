@@ -1,8 +1,10 @@
 from flask import Flask
 import json
 import requests
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 app.config["DEBUG"] = True
 
 APIKEY = "5ae2e3f221c38a28845f05b67974c00e6ed6d16556c0b2bd2763f6f0" 
