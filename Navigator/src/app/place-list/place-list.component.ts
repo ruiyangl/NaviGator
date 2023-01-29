@@ -7,7 +7,7 @@ import { PlaceFetchService } from '../services/place-fetch.service';
   styleUrls: ['./place-list.component.scss'],
 })
 export class PlaceListComponent implements OnInit {
-  public places: any;
+  public places: any = [];
 
   constructor(private plyFetch: PlaceFetchService) {}
 
