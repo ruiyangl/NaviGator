@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { AngularMaterialModule } from './material.module';
 import { PlaceListComponent } from './place-list/place-list.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     HttpClientModule,
     AngularMaterialModule,
+    FlexLayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

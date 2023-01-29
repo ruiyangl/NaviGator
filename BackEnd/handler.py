@@ -39,6 +39,8 @@ def get_attraction_list(point_of_interest, pg):
         dest = sorted_xids[i]
         response = requests.get(f"http://api.opentripmap.com/0.1/en/places/xid/{dest}?apikey={APIKEY}")
         data = json.loads(response.text)
+        print(data)
+        print("\n\n")
         res[dest] = {}
         try:
             res[dest]["name"] = data["name"]
@@ -54,7 +56,7 @@ def get_attraction_list(point_of_interest, pg):
         except:
             res[dest]["addr"] = "N/A"
         try:
-            res[dest]["img"] = data["image"]
+            res[dest]["img"] = data["preview"]["source"]
         except:
             res[dest]["img"] = "https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg?20200913095930"
         try:

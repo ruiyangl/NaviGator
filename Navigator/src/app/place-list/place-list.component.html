@@ -2,16 +2,27 @@
   <div *ngFor="let p of places" class="card-position">
     <mat-card class="example-card">
       <mat-card-title-group>
-        <mat-card-title>{{ p.name }}</mat-card-title>
-        <mat-card-subtitle>{{ p.kinds }}</mat-card-subtitle>
-        <img mat-card-xl-image [src]="p.preview.source" />
+        <mat-card-title style="color: #c2185b">{{ p.name }}</mat-card-title>
+        <mat-card-subtitle style="color: #c2185b"
+          >Address - {{ p.addr }}</mat-card-subtitle
+        >
       </mat-card-title-group>
       <mat-card-content>
-        {{ p.wikipedia_extracts.text }}
+        <div fxLayout="row wrap">
+          <div fxLayout="row">
+            <div fxFlex="25%">
+              <img mat-card-xl-image [src]="p.img" />
+              <!-- <img src="{{ pet.imagePath }}" /> -->
+            </div>
+            <div fxFlex="75%" style="color: #c2185b">
+              {{ p.discription }}
+            </div>
+          </div>
+        </div>
       </mat-card-content>
-      <mat-card-content>
+      <!-- <mat-card-content>
         {{ p.wikipedia_extracts.title }}
-      </mat-card-content>
+      </mat-card-content> -->
     </mat-card>
   </div>
 </div>
