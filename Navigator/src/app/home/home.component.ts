@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   }
   onSearch() {
     console.log('inside search');
-    // this.plyFetch.toSearch = this.textEntered;
+    this.plyFetch.toSearch = this.textEntered;
     // this.viewPackage.viewPlacePackages = this.textEntered;
   }
   ngOnDestroy() {

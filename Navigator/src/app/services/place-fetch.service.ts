@@ -10,8 +10,9 @@ export class PlaceFetchService {
   constructor(private http: HttpClient) {}
 
   getPlaces(): Observable<any> {
+    console.log(this.toSearch);
     return this.http.get<any>(
-      'http://107.20.193.99:8080/searchPlaces/' + String(this.toSearch)
+      'http://127.0.0.1:5000/attractions/' + String(this.toSearch) + '/1'
     );
   }
 }
