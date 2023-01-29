@@ -36,7 +36,6 @@ def get_attraction_list(point_of_interest, pg):
     count = 0
     i = 0
     while (i < len(sorted_xids) and count < 20):
-        print(count)
         dest = sorted_xids[i]
         response = requests.get(f"http://api.opentripmap.com/0.1/en/places/xid/{dest}?apikey={APIKEY}")
         data = json.loads(response.text)
