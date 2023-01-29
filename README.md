@@ -9,7 +9,7 @@ Flask: https://flask.palletsprojects.com/en/2.2.x/installation/.
 After installation navigate to 
 `/NaviGator/BackEnd`
 and run
-`flask --app handler run` to start a RESTapi`
+`flask --app handler run` to start a RESTapi
 If it's your first time using the OpenTripMap API, you would also need to sign in and obtain an apikey on their website(https://opentripmap.io/login).
 After obtaining the apikey, modify your own key in the `/NaviGator/BackEnd/handler.py` file
 
