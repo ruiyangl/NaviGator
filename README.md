@@ -4,14 +4,19 @@ It's a trip destination recomandation web application where users can enter the 
 ## Installation
 
 ### Backend
-We used Python flask for the backend to interact with OpenTripMap API (more information here: https://opentripmap.io/product) and data manipulation. To install Flask:
-Flask: https://flask.palletsprojects.com/en/2.2.x/installation/. 
-After installation navigate to 
-`/NaviGator/BackEnd`
-and run
-`flask --app handler run` to start a RESTapi
-If it's your first time using the OpenTripMap API, you would also need to sign in and obtain an apikey on their website(https://opentripmap.io/login).
-After obtaining the apikey, modify your own key in the `/NaviGator/BackEnd/handler.py` file
+We used Python flask for the backend to interact with OpenTripMap API    
+More information about OpenTripMap: https://opentripmap.io/product).   
+To install Flask: https://flask.palletsprojects.com/en/2.2.x/installation/. 
+  
+    
+    
+After installation, navigate to: `/NaviGator/BackEnd`   
+to start the RESTapi run: `flask --app handler run`  
+     
+     
+If it's your first time using the OpenTripMap API,   
+you would also need to sign in and obtain an API key on their website(https://opentripmap.io/login).    
+After obtaining the API key, modify your own key in the `/NaviGator/BackEnd/handler.py` file
 
 
 ### Frontend
