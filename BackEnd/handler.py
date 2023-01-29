@@ -78,6 +78,7 @@ def get_attraction_list(point_of_interest, pg):
 def attraction_list(point_of_interest, pg):
 
     dests = get_attraction_list(point_of_interest, int(pg))
-    return {"attractions":dests}
+
+    return {"attractions":[i for i in dests.values()]}
 
 
