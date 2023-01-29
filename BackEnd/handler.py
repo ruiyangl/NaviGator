@@ -1,8 +1,10 @@
 from flask import Flask
 import json
 import requests
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 app.config["DEBUG"] = True
 
 APIKEY = "5ae2e3f221c38a28845f05b67974c00e6ed6d16556c0b2bd2763f6f0" 
@@ -34,7 +36,6 @@ def get_attraction_list(point_of_interest, pg):
     count = 0
     i = 0
     while (i < len(sorted_xids) and count < 20):
-        print(count)
         dest = sorted_xids[i]
         response = requests.get(f"http://api.opentripmap.com/0.1/en/places/xid/{dest}?apikey={APIKEY}")
         data = json.loads(response.text)
