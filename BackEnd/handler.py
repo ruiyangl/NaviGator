@@ -7,7 +7,7 @@ app = Flask(__name__)
 CORS(app)
 app.config["DEBUG"] = True
 
-APIKEY = "5ae2e3f221c38a28845f05b67974c00e6ed6d16556c0b2bd2763f6f0" 
+APIKEY = ""
 
 def get_coordinants(point_of_interest):
     response = requests.get(f"https://api.opentripmap.com/0.1/en/places/geoname?name={point_of_interest}&apikey={APIKEY}")
